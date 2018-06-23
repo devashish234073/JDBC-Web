@@ -11,7 +11,7 @@ Below shown is the landing page "http://locahost:8888"
 After login below is the page to select the db
 ![e2](https://user-images.githubusercontent.com/20777854/41811677-b0290c78-7731-11e8-8caa-79e0e894c829.png)
 
-#### In the previous page is the "_html" in the url is changed to "_json" following is the response:
+#### In the previous page, when the "_html" in the url is changed to "_json" following is the response:
 ![e2_j](https://user-images.githubusercontent.com/20777854/41811678-b4a5831c-7731-11e8-9f57-e27fa1be5831.png)
 
 ## Below is the next page to select db and its corresponding json response
