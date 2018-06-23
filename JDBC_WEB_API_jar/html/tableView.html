@@ -1,0 +1,77 @@
+<html>
+<meta name="viewport" content="width=device-width version=1.0">
+<head>
+    <title>JDBC Web</title>
+    <style>
+    select,input[type='submit'] {
+        height:30px;
+        width:200px;
+    }
+    font{
+        margin-left:20px;
+    }
+    table{
+        display:block;
+    }
+    div{
+        margin-top:5%;
+        margin-left:10%;
+        width:60%;
+        background-color:khaki;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        box-shadow:5px 5px gray;
+        padding:20px;
+    }
+    </style>
+</head>
+<body>
+<form method='GET' action='viewTable_html'>
+    <div>
+        <table>
+
+        </table>
+    </div>
+</form>
+<script>
+    var colNames = [${colNames}];
+    var rows = [${rows}];
+    function createColumnHeadings() {
+        var table = document.querySelector("table");
+        var tr = document.createElement("tr");
+        for(var i=0;i<colNames.length;i++) {
+            var th   = document.createElement("th");
+            var font = document.createElement("font");
+            font.setAttribute("size",2);
+            font.innerText = colNames[i];
+            th.appendChild(font);
+            tr.appendChild(th);
+        }
+        table.appendChild(tr);
+    }
+    function addRowN(n) {
+        var rowElements = rows[n];
+        var table = document.querySelector("table");
+        var tr = document.createElement("tr");
+        for(var i=0;i<rowElements.length;i++) {
+            var td   = document.createElement("td");
+            var font = document.createElement("font");
+            font.setAttribute("size",2);
+            font.innerText = rowElements[i];
+            td.appendChild(font);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    function addRows() {
+        for(var n=0;n<rows.length;n++) {
+            addRowN(n);
+        }
+    }
+    createColumnHeadings();
+    addRows();
+</script>
+</body>
+</html>
