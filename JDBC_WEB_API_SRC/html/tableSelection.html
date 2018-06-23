@@ -1,0 +1,36 @@
+<html>
+<meta name="viewport" content="width=device-width version=1.0">
+<head>
+    <title>JDBC Web</title>
+    <style>
+    select,input[type='submit'] {
+        height:30px;
+        width:200px;
+    }
+    table{
+        border-collapse:collapse;
+    }
+    div{
+        margin-top:5%;
+        margin-left:10%;
+        width:60%;
+        background-color:khaki;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        box-shadow:5px 5px gray;
+        padding:20px;
+    }
+    </style>
+</head>
+<body>
+<form method='GET' action='viewTable_html'>
+    <div>
+        <table>
+            <tr><td><font size=2>Choose Table:</font></td><td><select name="tableName">${tableNames}</select></td><td><input type="submit" value="View Table"></td></tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>

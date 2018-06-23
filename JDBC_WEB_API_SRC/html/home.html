@@ -1,0 +1,41 @@
+<html>
+<meta name="viewport" content="width=device-width version=1.0">
+<head>
+    <title>JDBC Web</title>
+    <style>
+    input[type='text'],input[type='password'],input[type='number'],input[type='submit'] {
+        height:30px;
+        width:200px;
+    }
+    table{
+        border-collapse:collapse;
+    }
+    div{
+        margin-top:5%;
+        margin-left:10%;
+        width:35%;
+        background-color:khaki;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        box-shadow:5px 5px gray;
+        padding:20px;
+    }
+    </style>
+</head>
+<body>
+<form method='GET' action='showDatabases_html'>
+    <div>
+    <table>
+        <tr><td><font size=2>Db Type</font></td><td><input type='text' name='dbType' value='${dbType}'></td></tr>
+        <tr><td><font size=2>Host</font></td><td><input type='text' name='host' value='${host}'></td></tr>
+        <tr><td><font size=2>Port</font></td><td><input type='number' name='port' value='${port}'></td></tr>
+        <tr><td><font size=2>Username</font></td><td><input type='text' name='USERNAME' value="${username}"></td></tr>
+        <tr><td><font size=2>Password</font></td><td><input type='password' name='PASSWORD'></td></tr>
+    <tr><td></td><td><input type='submit' value='Connect'></td></tr>
+    </table>
+    </div>
+</form>
+</body>
+</html>
